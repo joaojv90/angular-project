@@ -1,0 +1,10 @@
+img {
+    display: block;
+    margin: auto;
+    height: 600px;
+    width: 900px;
+}
+
+.error {
+    text-align: center;
+}

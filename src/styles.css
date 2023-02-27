@@ -1,0 +1,16 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: black;
+}
+
+.imgP {
+    width: 100px;
+    height: auto;
+}
+
+.nav-item {
+    font-size: 10px;
+}

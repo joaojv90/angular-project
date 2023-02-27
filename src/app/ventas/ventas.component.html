@@ -1,0 +1,28 @@
+<div class="container">
+    <br>
+    <h2>Galería de Productos</h2>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let item of product">
+            <div class="thumbnail">
+                <a href={{item.img}} target="_blank">
+                    <div>
+                        <img src={{item.img}} alt="Lights" class="imgP">
+                    </div>
+                    <div class="caption">
+                        <h5>Nombre: {{item.nombre}}</h5>
+                        <h5>Precio: {{item.precio}}</h5>
+                    </div>
+                </a>
+                <button type="button" class="btn btn-info">
+                    Agregar al <span nz-icon nzType="shopping-cart">
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<br>
+<app-us></app-us>

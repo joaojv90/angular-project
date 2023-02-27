@@ -1,0 +1,37 @@
+<div class="container">
+  <h2>Inventario de Productos</h2>
+  <p>Listado de productos y cantidades en stock</p>
+  <div class="pull-right"> 
+
+    <a class="btn btn-primary" routerLink="/modal" >Agregar</a>
+  </div> 
+ 
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Producto</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Imagen</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let item of productos">
+        <td>{{item.id}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.precio}}</td>
+        <td>{{item.cantidad}}</td>
+        <td><img src="{{item.img}}" alt="imagen producto" class="imgP"></td>
+        <td> 
+          <button type="button" class="btn btn-warning" routerLink="/modal/{{item.id}}">
+            Editar</button>
+          <button type="button" class="btn btn-danger" (click)="remove(item.id)">
+            Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
